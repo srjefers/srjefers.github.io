@@ -1,0 +1,103 @@
+[
+  {
+    "titlesHead":["Acerca de mi", "Intereses personales", "Educacion", "Habilidades", "Herramientas", "Portafolio"],
+    "aboutMe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas dolore reiciendis placeat ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus provident ratione. Repudiandae voluptas dolore reiciendis placeat ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus provident ratione.",
+    "interesesPersonales":["UI","UX", "Fotografia", "Software Libre", "Lectura", "Data Science", "Desarrollo Web", "Historia"],
+    "Educacion":[
+      {
+        "Tema":"Ingenieria en Sistemas", 
+        "Anio":"2015 - [Cursado actualmente]",
+        "Lugar":"Universidad Mariano Galvez de Guatemala",
+        "URL":""
+      },
+      {
+        "Tema":"Bachillerato en Computacion",
+        "Anio":"2013 - 2014",
+        "Lugar":"Colegio Cristiano Torricelli",
+        "URL":""
+      },
+      {
+        "Tema":"M001: MongoDB Basics",
+        "Anio":"2018",
+        "Lugar":"MongoDB University",
+        "URL":""
+      },
+      {
+        "Tema":"Java Tutorial",
+        "Anio":"2018",
+        "Lugar":"SoloLearn",
+        "URL":""
+      },
+      {   
+        "Tema":"JavaScript Tutorial",
+        "Anio":"2018",
+        "Lugar":"SoloLearn",
+        "URL":""
+      },
+      {
+        "Tema":"SQL Fundamentals",
+        "Anio":"2018",
+        "Lugar":"SoloLearn",
+        "URL":""
+      }
+    ],
+    "Habilidades":[
+      {
+        "Lenguaje":"C++",
+        "Nivel":"Basico - Intermedio",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },  
+      {
+        "Lenguaje":"CSS",
+        "Nivel":"Intermedio - Avanzado",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },
+      {
+        "Lenguaje":"HTML",
+        "Nivel":"Intermedio - Avanzado",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },  
+      {
+        "Lenguaje":"Java",
+        "Nivel":"Intermedio",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },
+      {
+        "Lenguaje":"Java Script",
+        "Nivel":"Intermedio - Avanzado",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },
+      {
+        "Lenguaje":"MongoDB [NoSQL]",
+        "Nivel":"Basico - Intermedio",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },
+      {
+        "Lenguaje":"Oracle [PL/SQL]",
+        "Nivel":"Intermedio",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      },
+      {
+        "Lenguaje":"PostgreSQL [PLPGSQL]",
+        "Nivel":"Intermedio",
+        "Img": "",
+        "ajuste": true,
+        "estado": true
+      }
+    ]
+  }
+]
