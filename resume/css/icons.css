@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?e9ykxv');
+  src:  url('fonts/icomoon.eot?e9ykxv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?e9ykxv') format('truetype'),
+    url('fonts/icomoon.woff?e9ykxv') format('woff'),
+    url('fonts/icomoon.svg?e9ykxv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-r-text:before {
+  content: "\e904";
+}
+.icon-r-mail:before {
+  content: "\e905";
+}
+.icon-r-grade:before {
+  content: "\e906";
+}
+.icon-r-verified_user-24px:before {
+  content: "\e907";
+}
+.icon-r-phone:before {
+  content: "\e908";
+}
+.icon-r-clear:before {
+  content: "\e909";
+}
+.icon-r-title:before {
+  content: "\e90a";
+}
+.icon-r-wb_sunny:before {
+  content: "\e90b";
+}
+.icon-r-font_down:before {
+  content: "\e90c";
+}
+.icon-i-telegram:before {
+  content: "\e90d";
+}
+.icon-i-linkedin:before {
+  content: "\e90e";
+}
+.icon-i-github:before {
+  content: "\e90f";
+}
+.icon-r-star_rate:before {
+  content: "\e910";
+}
+.icon-g-man:before {
+  content: "\e911";
+}
+.icon-r-p_pdf:before {
+  content: "\e912";
+}
+.icon-r-sentiment_satisfied:before {
+  content: "\e913";
+}
+.icon-r-directions_run:before {
+  content: "\e914";
+}
+.icon-r-directions_walk:before {
+  content: "\e915";
+}
+.icon-r-mood:before {
+  content: "\e916";
+}
+.icon-r-n_paused:before {
+  content: "\e917";
+}
+.icon-r-code:before {
+  content: "\e918";
+}
+.icon-r-favorite:before {
+  content: "\e919";
+}
+.icon-r-arrow_right:before {
+  content: "\e91a";
+}
+.icon-dollar-sign:before {
+  content: "\e900";
+}
+.icon-type:before {
+  content: "\e901";
+}
+.icon-x-circle:before {
+  content: "\e902";
+}
+.icon-x-square:before {
+  content: "\e903";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}

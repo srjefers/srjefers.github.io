@@ -14,12 +14,12 @@ font-family: 'Rubik', sans-serif;
 	-webkit-box-sizing: border-box;
 }
 ::-moz-selection{
-		color: white;
-		background-color: black;
+		color: black;
+		background-color: #F9CE4E;
 }
 ::selection{
-		color: white;
-		background-color: black;
+		color: black;
+		background-color: #F9CE4E;
 }
 html {
     scroll-behavior: smooth;
@@ -54,8 +54,20 @@ html {
     align-items: center;
     margin-top: 1em;
 }
-
-
+.b-on:first-child{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.b-on:last-child{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 /*------------------------------------------------------------------*/
 body{
     margin: 0;
@@ -66,6 +78,7 @@ body{
 header{
     padding: 0.5em 0;
     margin-top: -2em;
+    z-index: 200;
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -87,22 +100,62 @@ header button b{
 }
 header button #hamb{
     padding: 0.5em;
+    display: inline-block;
     margin: 0;
-    width: 2em;
+    width: 1.7em;
 }
 header button #hamb .barra{
     margin: 0.4em 0 0.4em;
+    transition: all 0.3s;
+    -webkit-transform-origin: 30% center;
+    -moz-transform-origin: 30% center;
+    -ms-transform-origin: 30% center;
+    -o-transform-origin: 30% center;
+    transform-origin: 30% center;
     width: 100%;
+    display: block;
     border-radius: 10px;
     border: 1px solid black;
 }
-.show{
-    height: 100vh;
+#n-dos{
+    height: auto;
+    display: none;
+    position: fixed;
+    margin-top: -2em;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     width: 100%;
-    display: inline;
-    border: 1px solid red;
+    background-color: white;
+    text-align: center;
+    overflow: auto;
 }
-
+#n-dos ul{
+    margin: 0;
+    padding: 0;
+}
+#n-dos ul li{
+    list-style: none;
+    line-height: 2.5em;
+    padding: 0 0.5em;
+}
+#n-dos ul li a{
+    margin: 0;
+    color: black;
+    font-family: var(--ft-first);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+}
+#n-dos ul li:hover{
+    background-color: lightgray;
+    font-weight: 500;
+}
 #barra nav{
     display: none;
 }
@@ -112,7 +165,7 @@ header button #hamb .barra{
     display: none;
     position: fixed;
     margin-top: -2em;
-    z-index: 99;
+    z-index: 205;
     height: auto;
     min-height:110vh;
     background-color: white;
@@ -155,7 +208,7 @@ header button #hamb .barra{
 .modal-content form textarea:hover, .modal-content form textarea:focus{
     border: 2px solid black;
 }
-.modal-content form .box{
+.modal-content form .mBox{
     border: 0px;
     display: flex;
     justify-content: center;
@@ -164,16 +217,16 @@ header button #hamb .barra{
 }
 
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+    from {top:-400px} 
+    to {top:0}
 }
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    from {top:-400px}
+    to {top:0}
 }
 .close {
 	z-index: 90;
-    color: red;
+    color: black;
     display: flex;
     justify-content: flex-end;
     padding-right: 0.4em;
@@ -181,20 +234,9 @@ header button #hamb .barra{
     font-size: 28px;
 }
 
-.close:hover,
-.close:focus {
-    color: red;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-
 
 
 /* -----------ESTILOS NORMALES (para móviles en vertical)----------- */
-
 #barra{
     background-color: rgb(254, 254, 254);
 }
@@ -237,10 +279,17 @@ header button #hamb .barra{
     font-weight: 700;
 } 
 #barra .contact{
-    margin-top: auto;
+    margin-top: 2em;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
+}
+#barra .contact span{
+    font-size: 1.4em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
 #barra img{
@@ -318,7 +367,7 @@ header button #hamb .barra{
     padding: 1em 1.5em;
 }
 .lina-edu .line{
-    padding: 0.2em 0 0.2em 1em;
+    padding: 0.2em 0 0.2em 0.6em;
     border-left: 2px solid silver;
     transition: all 0.19s;
 }
@@ -326,16 +375,10 @@ header button #hamb .barra{
     border-left: 2px solid #000;
 }
 .lina-edu .item{
-    padding: 0.5em 1.8em;
+    padding: 0.5em 1em;
     border-radius: 5px;
     transition: all .4s;
-
 }
-/*.lina-edu .item:hover, .lina-edu .item:focus {
-    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.09), 0px 0px 13px 0px rgba(0, 0, 0, 0.09);
-    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.09), 0px 0px 13px 0px rgba(0, 0, 0, 0.09);
-    -moz-box-shadow:  0px 0px 13px 0px rgba(0, 0, 0, 0.09), 0px 0px 13px 0px rgba(0, 0, 0, 0.09);
-}*/
 .lina-edu h2{
     letter-spacing:  1px;
     word-spacing: 2px;
@@ -349,6 +392,18 @@ header button #hamb .barra{
     font-family: var(--ft-first);
     position: relative;
 }
+.lina-edu .url a{
+    display: flex;
+}
+.lina-edu .url span{
+    display: flex;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    color: #222;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.8em;
+}
 .lina-edu p{
     letter-spacing:  1px;
     word-spacing: 2px;
@@ -357,11 +412,14 @@ header button #hamb .barra{
     margin: 8px 0 0;
     position: relative;
 }
+.lina-edu p:hover{
+    color: #222;
+}
 .lina-edu p:before{
     content: '';
     position: absolute;
-    left: -3.3em;
-    top: -3.9em;
+    left: -2.2em;
+    top: -2.8em;
     width: 15px;
     height: 15px;
     border: 3px solid silver;
@@ -380,7 +438,7 @@ header button #hamb .barra{
     grid-auto-rows: minmax(80px, 90px);
     grid-template-columns: repeat(1, 1fr);
     padding: 1em;
-    grid-gap: 15px 10px;
+    grid-gap: 0.9em 0.7em;
 }
 #content main #r_tres .hg_uno .item{
     border-radius: 6px;
@@ -410,6 +468,20 @@ header button #hamb .barra{
     font-size: 1.2em;
     color: var(--fc-init);
 }
+#content main #r_tres .hg_uno .item .info .datos .title span{
+    margin-left: -0.5em;
+    color: #FF3C32;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    transition: all 0.1s;
+    opacity: 0;
+    align-items: center;
+}
+#content main #r_tres .hg_uno .item .info .datos > .title span:hover{
+    opacity: 1;
+}
+
 #content main #r_tres .hg_uno .item .info .datos{
     font-size: 0.8em;
     color: rgb(55, 55, 55);
@@ -449,6 +521,9 @@ header button #hamb .barra{
 
 /* -----------Tablets en horizonal y escritorios normales----------- */
 @media (min-width: 1024px) {
+    #n-dos{
+        display: none;
+    }
     /*--------------------------------*/
     .modal {
         margin-top: 0;
@@ -519,7 +594,7 @@ header button #hamb .barra{
         color: var(--fc-init);
     }
     #barra .contact{
-        margin-top: auto;
+        margin-top: 25vh;
         display: flex;
         align-items: flex-end;
         justify-content: center;

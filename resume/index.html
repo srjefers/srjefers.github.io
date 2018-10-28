@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resumen</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
@@ -16,13 +16,23 @@
             <div id="hamb">
                 <figure class="barra"></figure>
                 <figure class="barra"></figure>
-                <figure class="barra"></figure>
             </div>
         </button>
     </header>
 
+
+    <nav id="n-dos">
+        <ul>
+            <li class="m_close"><a href="#r_uno">Acerca de mi</a></li>
+            <li class="m_close"><a href="#r_dos">Educacion</a></li>
+            <li class="m_close"><a href="#r_tres">Habilidades</a></li>
+            <li class="m_close"><a href="#r_four">Portafolio</a></li>
+            <li class="m_close"><a href="#">Recomendaciones</a></li>
+        </ul>
+    </nav>
+
     <section id="myModal" class="modal">
-        <span class="close">X</span>  
+        <span class="close  icon-r-clear"></span>  
         <div class="modal-content">  
             <form action="https://formcarry.com/s/yRlDRPBxWfZ" method="POST" accept-charset="UTF-8"  >
                 <label for="firstName">Nombre</label>
@@ -32,7 +42,7 @@
                 <label for="mensaje">Mensaje</label>
                 <textarea type="text" name="mensaje" placeholder="Hey there! :D" required></textarea>
                 <div id="secure" class="g-recaptcha" data-sitekey="6LdKXXYUAAAAAJD7YGreUmiGoWdMKJFHa9yO7hT_"></div>
-                <div class="box">
+                <div class="mBox">
                     <button class="btn_event" type="submit">Enviar</button>
                 </div>
             </form>
@@ -59,7 +69,9 @@
                 </ul>
             </nav>
             <div class="contact">
-                <h4>botones aqui</h4>
+                <span class="icon-r-mail"></span>
+                <span class="icon-linkedin"></span>
+                <span class="icon-i-github"></span>
             </div>
             
         </section>
@@ -82,36 +94,55 @@
                         <div class="line">
                             <div class="item">
                                 <h2>Ingenieria en Sistemas</h2>
-                                <h5>2015 - [Cursado actualmente]</h5>
-                                <p>Universidad Mariano Galvez de Guatemala</p>
+                                <h5>2015 - [Cuarto año actualmente]</h5>
+                                <article class="url">
+                                    <p>Universidad Mariano Galvez de Guatemala</p>
+                                </article>
                             </div>
                         </div>
                         <div class="line">                        
                             <div class="item">
                                 <h2>Bachillerato en Computacion</h2>
                                 <h5>2013 - 2014</h5>
-                                <p>Colegio Torricelli</p>
+                                <article class="url">
+                                    <p>Colegio Torricelli</p>
+                                </article>
                             </div>
                         </div>
                         <div class="line">
                             <div class="item">
                                 <h2>M001: MongoDB Basics</h2>
                                 <h5>2018</h5>
-                                <p>MongoDB University</p>
+                                <article class="url">
+                                    <a href="https://university.mongodb.com/course_completion/37a81e1f-0307-4e81-b62f-549343d3/printable">
+                                        <p>MongoDB University</p>
+                                        <span class="icon-r-arrow_right"></span>
+                                    </a>    
+                                </article>
                             </div>
                         </div>
                         <div class="line">
                             <div class="item">
                                 <h2>Java Tutorial </h2>
                                 <h5>2018</h5>
-                                <p>SoloLearn</p>
+                                <article class="url">
+                                    <a href="https://www.sololearn.com/Certificate/1068-11199992/pdf/">
+                                        <p>SoloLearn</p>
+                                        <span class="icon-r-arrow_right"></span>    
+                                    </a>
+                                </article>
                             </div>
                         </div>
                         <div class="line">
                             <div class="item">
                                 <h2>JavaScript Tutorial</h2>
                                 <h5>2018</h5>
-                                <p>SoloLearn</p>
+                                <article class="url">
+                                    <a href="https://www.sololearn.com/Certificate/1024-11199992/pdf/">
+                                        <p>SoloLearn</p>
+                                        <span class="icon-r-arrow_right"></span>    
+                                    </a>
+                                </article>
                             </div>
                         </div>        
                     </section>
@@ -119,149 +150,193 @@
                 <section class="elem" id="r_tres">
                     <h1>Habilidades</h1>
                     <section class="hg_uno" id="dataGrid">
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/cpp.svg" alt="C++">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <article class="title">
-                                        <h3>C++</h3>
-                                        <img src="images/svg/i-love.svg" alt="Love">
+                                        <h3>C++</h3> 
                                     </article>
                                     <p>Basico - Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/css.svg" alt="CSS">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>CSS</h3>
+                                    <article class="title">
+                                        <h3>CSS</h3> 
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/hibernate.svg" alt="Hibernate Framework">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>Hibernate Framework</h3>
+                                    <article class="title">
+                                        <h3>Hibernate Framework</h3>
+                                    </article>
                                     <p>Basico - Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/html5.svg" alt="HTML 5">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>HTML 5</h3>
+                                    <article class="title">
+                                        <h3>HTML 5</h3>
+                                    </article>
                                     <p>Intermedio Avanzado</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/java.svg" alt="Java">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>Java</h3>
+                                    <article class="title">
+                                        <h3>Java</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/js.svg" alt="Java Script">
                             </div>
                             <article class="info">
-                                <div class="datos">
-                                    <h3>Java Script</h3>
+                                <div class="datos">        
+                                    <article class="title">
+                                        <h3>Java Script</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/mongodb.svg" alt="MongoDb">
                             </div>
                             <article class="info">
-                                <div class="datos">
-                                    <h3>MongoDb [No SQL]</h3>
+                                <div class="datos">        
+                                    <article class="title">
+                                        <h3>MongoDB [No SQL]</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/nodejs.svg" alt="NodeJs">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>NodeJs</h3>
-                                    <p>Basico</p>
+                                    <article class="title">
+                                        <h3>NodeJs</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
+                                    <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
     
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/oracle.svg" alt="Oracle Data Base">
                             </div>
                             <article class="info">
-                                <div class="datos">
-                                    <h3>Oralce [PL/SQL]</h3>
+                                <div class="datos">        
+                                    <article class="title">
+                                        <h3>Oracle [PL/SQL]</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/postgre.svg" alt="PostgreSQL Data Base" srcset="">
                             </div>
                             <article class="info">
-                                <div class="datos">
-                                    <h3>PostgreSQL [PLPGSQL]</h3>
+                                <div class="datos">        
+                                    <article class="title">
+                                        <h3>PostgreSQL [PLPGSQL]</h3>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
+                            <div class="img">
+                                <img src="images/svg/python.svg" alt="Python">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
+                                    <article class="title">
+                                        <h3>Python</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
+                                    <p>Basico</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/spring.svg" alt="Spring Framework">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>Spring Framework</h3>
+                                    <article class="title">
+                                        <h3>Spring Framework</h3>
+                                    </article>
                                     <p>Basico - Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/sql.svg" alt="SQL Language">
                             </div>
                             <article class="info">
-                                <div class="datos">
-                                    <h3>SQL</h3>
+                                <div class="datos">        
+                                    <article class="title">
+                                        <h3>SQL</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item">
+                        <div class="box item">
                             <div class="img">
                                 <img src="images/svg/vuejs.svg" alt="Vue.Js Framework">
                             </div>
                             <article class="info">
                                 <div class="datos">
-                                    <h3>Vue.Js Framework</h3>
+                                    <article class="title">
+                                        <h3>Vue.Js Framework</h3>
+                                        <span class="icon-r-favorite"></span>
+                                    </article>
                                     <p>Intermedio</p>
                                 </div>
                             </article>
@@ -312,17 +387,6 @@
                         </div>
                         <div class="item disable">
                             <div class="img">
-                                <img src="images/svg/python.svg" alt="Python">
-                            </div>
-                            <article class="info">
-                                <div class="datos">
-                                    <h3>Python</h3>
-                                    <p>No desbloqueado</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="item disable">
-                            <div class="img">
                                 <img src="images/svg/rust.svg" alt="Rust">
                             </div>
                             <article class="info">
@@ -367,16 +431,6 @@
                         </div>
                         <div class="item">
                             <div class="img">
-                                <img src="images/svg/linux.svg" alt="Linux">
-                            </div>
-                            <article class="info">
-                                <div class="datos">
-                                    <h3>Linux</h3>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="item">
-                            <div class="img">
                                 <img src="images/svg/pentaho.svg" alt="Pentaho">
                             </div>
                             <article class="info">
@@ -416,6 +470,69 @@
                             </article>
                         </div>
                     </section>    
+                    <h1>Sistemas Operativos</h1>
+                    <section class="hg_uno" id="dataGrid">
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/centos.svg" alt="CentOs">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>CentOs</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/debian.svg" alt="Debian">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>Debian</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/deepin.svg" alt="Deepin">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>Deepin</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/fedora.svg" alt="Fedora">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>Fedora</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/opensuse.svg" alt="Open Suse">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>Open Suse</h3>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item">
+                                <div class="img">
+                                    <img src="images/svg/ubuntu.svg" alt="Ubuntu">
+                                </div>
+                                <article class="info">
+                                    <div class="datos">
+                                    <h3>Ubuntu</h3>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                 </section>
                 <section class="elem" id="r_four">
                     <h1>Portafolio</h1>
