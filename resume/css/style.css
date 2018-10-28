@@ -48,6 +48,12 @@ html {
     filter: contrast(4) invert(1);
 }
 
+#secure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
 
 
 /*------------------------------------------------------------------*/
