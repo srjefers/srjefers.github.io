@@ -1,9 +1,5 @@
 const URL = 'https://raw.githubusercontent.com/srjefers/resume/master/js/';
 const menu = document.getElementById('menu');
-const mail = document.getElementById('mail');
-const formulario = document.getElementById('formulario');
-let modal = document.getElementById('myModal');
-let span = document.getElementsByClassName("close")[0];
 
 const miInit = {
     method: 'GET',
@@ -55,10 +51,3 @@ menu.addEventListener('click',(e)=>{
 
 
 
-
-mail.addEventListener('click', ()=>{
-    modal.style.display = "block";
-});
-span.onclick = function() {
-    modal.style.display = "none";
-}
