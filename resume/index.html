@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/icons.css">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
+
 <body>
     <header>
         <button id="menu">
@@ -32,13 +34,13 @@
     </nav>
 
     <section id="myModal" class="modal">
-        <span class="close  icon-r-clear"></span>  
-        <div class="modal-content">  
-            <form action="https://formcarry.com/s/yRlDRPBxWfZ" method="POST" accept-charset="UTF-8"  >
+        <span class="close  icon-r-clear"></span>
+        <div class="modal-content">
+            <form action="https://formcarry.com/s/yRlDRPBxWfZ" method="POST" accept-charset="UTF-8">
                 <label for="firstName">Nombre</label>
-                <input type="text" name="firstName" placeholder="John Doe">
+                <input type="text" name="firstName" placeholder="John Doe" autofocus/>
                 <label for="email">Correo</label>
-                <input type="email" name="email" placeholder="john@mail.com" required>
+                <input type="email" name="email" placeholder="john@mail.com" required/>
                 <label for="mensaje">Mensaje</label>
                 <textarea type="text" name="mensaje" placeholder="Hey there! :D" required></textarea>
                 <div id="secure" class="g-recaptcha" data-sitekey="6LdKXXYUAAAAAJD7YGreUmiGoWdMKJFHa9yO7hT_"></div>
@@ -48,7 +50,7 @@
             </form>
         </div>
     </section>
-    
+
     <section id="init">
         <section id="barra">
             <div class="principal">
@@ -56,7 +58,8 @@
                     <img src="images/b1.jpg" alt="profile">
                     <h1>Sr Jefers</h1>
                     <h3>Web Developer / SQL Developer</h3>
-                    <button id="mail" class="btn_event">Hablame! :D</button> <!--href="mailto:ajefersonstiv@gmail.com"-->
+                    <button id="mail" class="btn_event">Hablame! :D</button>
+                    <!--href="mailto:ajefersonstiv@gmail.com"-->
                 </div>
             </div>
             <nav>
@@ -65,7 +68,6 @@
                     <li><a href="#r_dos">Educacion</a></li>
                     <li><a href="#r_tres">Habilidades</a></li>
                     <li><a href="#r_four">Portafolio</a></li>
-                    <li><a href="#">Recomendaciones</a></li>
                 </ul>
             </nav>
             <div class="contact">
@@ -73,19 +75,23 @@
                 <span class="icon-linkedin"></span>
                 <span class="icon-i-github"></span>
             </div>
-            
+
         </section>
-    
         <script src="js/mail.js"></script>
-        <section id="content">      
+        <section id="content">
             <main>
                 <section class="elem" id="r_uno">
-                    <h1>Acerca de mi</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas dolore reiciendis placeat 
-                        ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus 
-                        provident ratione. Repudiandae voluptas dolore reiciendis placeat 
-                        ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus 
-                        provident ratione.</p>
+                    <h1>Hey soy Jeferson!</h1>
+                    <p>Soy una persona de gustos simples, proactiva, autodidacta, que no le teme al cambio y con un gran amor a la programación. Soy del tipo de persona que se fija en los detalles y aun despues de terminar el trabajo, trata de buscar como
+                        mejorarlo.
+                    </p>
+                    <p>Me encanta aprender nuevas cosas, ser comunicativo. Soy una persona que puede trabajar junto a un grupo de personas o de forma individual y siempre entregar el mismo resultado.</p>
+                    <p class="love">Linux = <span class="icon-r-favorite"></span></p>
+                    <h2>Idiomas</h2>
+                    <ul>
+                        <li>Español</li>
+                        <li>Ingles</li>
+                    </ul>
                     <h2>Intereses personales</h2>
                 </section>
                 <section class="elem" id="r_dos">
@@ -100,7 +106,7 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="line">                        
+                        <div class="line">
                             <div class="item">
                                 <h2>Bachillerato en Computacion</h2>
                                 <h5>2013 - 2014</h5>
@@ -117,7 +123,7 @@
                                     <a href="https://university.mongodb.com/course_completion/37a81e1f-0307-4e81-b62f-549343d3/printable">
                                         <p>MongoDB University</p>
                                         <span class="icon-r-arrow_right"></span>
-                                    </a>    
+                                    </a>
                                 </article>
                             </div>
                         </div>
@@ -128,7 +134,7 @@
                                 <article class="url">
                                     <a href="https://www.sololearn.com/Certificate/1068-11199992/pdf/">
                                         <p>SoloLearn</p>
-                                        <span class="icon-r-arrow_right"></span>    
+                                        <span class="icon-r-arrow_right"></span>
                                     </a>
                                 </article>
                             </div>
@@ -140,11 +146,11 @@
                                 <article class="url">
                                     <a href="https://www.sololearn.com/Certificate/1024-11199992/pdf/">
                                         <p>SoloLearn</p>
-                                        <span class="icon-r-arrow_right"></span>    
+                                        <span class="icon-r-arrow_right"></span>
                                     </a>
                                 </article>
                             </div>
-                        </div>        
+                        </div>
                     </section>
                 </section>
                 <section class="elem" id="r_tres">
@@ -157,7 +163,7 @@
                             <article class="info">
                                 <div class="datos">
                                     <article class="title">
-                                        <h3>C++</h3> 
+                                        <h3>C++</h3>
                                     </article>
                                     <p>Basico - Intermedio</p>
                                 </div>
@@ -170,7 +176,21 @@
                             <article class="info">
                                 <div class="datos">
                                     <article class="title">
-                                        <h3>CSS</h3> 
+                                        <h3>CSS</h3>
+                                    </article>
+                                    <p>Intermedio</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="box item">
+                            <div class="img">
+                                <img src="images/svg/flask.svg" alt="Flask Framework">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
+                                    <article class="title">
+                                        <h3>Flask</h3>
+                                        <span class="icon-r-favorite"></span>
                                     </article>
                                     <p>Intermedio</p>
                                 </div>
@@ -185,7 +205,7 @@
                                     <article class="title">
                                         <h3>Hibernate Framework</h3>
                                     </article>
-                                    <p>Basico - Intermedio</p>
+                                    <p>Basico</p>
                                 </div>
                             </article>
                         </div>
@@ -221,7 +241,7 @@
                                 <img src="images/svg/js.svg" alt="Java Script">
                             </div>
                             <article class="info">
-                                <div class="datos">        
+                                <div class="datos">
                                     <article class="title">
                                         <h3>Java Script</h3>
                                         <span class="icon-r-favorite"></span>
@@ -235,7 +255,7 @@
                                 <img src="images/svg/mongodb.svg" alt="MongoDb">
                             </div>
                             <article class="info">
-                                <div class="datos">        
+                                <div class="datos">
                                     <article class="title">
                                         <h3>MongoDB [No SQL]</h3>
                                         <span class="icon-r-favorite"></span>
@@ -258,13 +278,13 @@
                                 </div>
                             </article>
                         </div>
-    
+
                         <div class="box item">
                             <div class="img">
                                 <img src="images/svg/oracle.svg" alt="Oracle Data Base">
                             </div>
                             <article class="info">
-                                <div class="datos">        
+                                <div class="datos">
                                     <article class="title">
                                         <h3>Oracle [PL/SQL]</h3>
                                         <span class="icon-r-favorite"></span>
@@ -278,7 +298,7 @@
                                 <img src="images/svg/postgre.svg" alt="PostgreSQL Data Base" srcset="">
                             </div>
                             <article class="info">
-                                <div class="datos">        
+                                <div class="datos">
                                     <article class="title">
                                         <h3>PostgreSQL [PLPGSQL]</h3>
                                     </article>
@@ -296,7 +316,7 @@
                                         <h3>Python</h3>
                                         <span class="icon-r-favorite"></span>
                                     </article>
-                                    <p>Basico</p>
+                                    <p>Intermedio</p>
                                 </div>
                             </article>
                         </div>
@@ -309,7 +329,7 @@
                                     <article class="title">
                                         <h3>Spring Framework</h3>
                                     </article>
-                                    <p>Basico - Intermedio</p>
+                                    <p>Basico</p>
                                 </div>
                             </article>
                         </div>
@@ -318,7 +338,7 @@
                                 <img src="images/svg/sql.svg" alt="SQL Language">
                             </div>
                             <article class="info">
-                                <div class="datos">        
+                                <div class="datos">
                                     <article class="title">
                                         <h3>SQL</h3>
                                         <span class="icon-r-favorite"></span>
@@ -341,58 +361,47 @@
                                 </div>
                             </article>
                         </div>
-                        <div class="item disable">
+                        <div class="box item disable">
                             <div class="img">
                                 <img src="images/svg/angular.svg" alt="Angular Framework">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <h3>Angular Framework</h3>
-                                    <p>No desbloqueado</p>
+                                    <p>Proximamente</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item disable">
+                        <div class="box item disable">
                             <div class="img">
                                 <img src="images/svg/c.svg" alt="C">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <h3>C</h3>
-                                    <p>No desbloqueado</p>
+                                    <p>Proximamente</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item disable">
+                        <div class="box item disable">
                             <div class="img">
                                 <img src="images/svg/django.svg" alt="Django">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <h3>Django</h3>
-                                    <p>No desbloqueado</p>
+                                    <p>Proximamente</p>
                                 </div>
                             </article>
                         </div>
-                        <div class="item disable">
-                            <div class="img">
-                                <img src="images/svg/flask.svg" alt="Flask Framework">
-                            </div>
-                            <article class="info">
-                                <div class="datos">
-                                    <h3>Flask</h3>
-                                    <p>No desbloqueado</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="item disable">
+                        <div class="box item disable">
                             <div class="img">
                                 <img src="images/svg/rust.svg" alt="Rust">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <h3>Rust</h3>
-                                    <p>No desbloqueado</p>
+                                    <p>Proximamente</p>
                                 </div>
                             </article>
                         </div>
@@ -469,65 +478,65 @@
                                 </div>
                             </article>
                         </div>
-                    </section>    
+                    </section>
                     <h1>Sistemas Operativos</h1>
                     <section class="hg_uno" id="dataGrid">
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/centos.svg" alt="CentOs">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/centos.svg" alt="CentOs">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>CentOs</h3>
                                 </div>
                             </article>
                         </div>
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/debian.svg" alt="Debian">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/debian.svg" alt="Debian">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>Debian</h3>
                                 </div>
                             </article>
                         </div>
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/deepin.svg" alt="Deepin">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/deepin.svg" alt="Deepin">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>Deepin</h3>
                                 </div>
                             </article>
                         </div>
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/fedora.svg" alt="Fedora">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/fedora.svg" alt="Fedora">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>Fedora</h3>
                                 </div>
                             </article>
                         </div>
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/opensuse.svg" alt="Open Suse">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/opensuse.svg" alt="Open Suse">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>Open Suse</h3>
                                 </div>
                             </article>
                         </div>
                         <div class="item">
-                                <div class="img">
-                                    <img src="images/svg/ubuntu.svg" alt="Ubuntu">
-                                </div>
-                                <article class="info">
-                                    <div class="datos">
+                            <div class="img">
+                                <img src="images/svg/ubuntu.svg" alt="Ubuntu">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
                                     <h3>Ubuntu</h3>
                                 </div>
                             </article>
@@ -540,7 +549,8 @@
             </main>
         </section>
     </section>
-    
+
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

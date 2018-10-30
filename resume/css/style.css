@@ -1,25 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rubik:300,400,500,700');
-/*
-font-family: 'Roboto', sans-serif;
-font-family: 'Rubik', sans-serif;
-*/
-
-*{
-	text-rendering: optimizeLegibility;
-    text-decoration:  none;
+* {
+    text-rendering: optimizeLegibility;
+    text-decoration: none;
 }
-*:before, *:after{
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
+*:before,
+*:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
-::-moz-selection{
-		color: black;
-		background-color: #F9CE4E;
+::-moz-selection {
+    color: black;
+    background-color: #F9CE4E;
 }
-::selection{
-		color: black;
-		background-color: #F9CE4E;
+::selection {
+    color: black;
+    background-color: #F9CE4E;
 }
 html {
     scroll-behavior: smooth;
@@ -29,8 +25,11 @@ html {
     --ft-second: 'Rubik', sans-serif;
     --fc-init: black;
 }
-
-.disable{
+* a,
+* button {
+    cursor: pointer;
+}
+.disable {
     opacity: 0.5;
 }
 .material-icons-new {
@@ -47,35 +46,35 @@ html {
     -ms-filter: contrast(4) invert(1);
     filter: contrast(4) invert(1);
 }
-
-#secure{
+#secure {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1em;
 }
-.b-on:first-child{
+.b-on:first-child {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.b-on:last-child{
+.b-on:last-child {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
+
 /*------------------------------------------------------------------*/
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: white;
-	/*cursor: url('po.svg'), auto;*/
+    /*cursor: url('po.svg'), auto;*/
 }
-header{
+header {
     padding: 0.5em 0;
     margin-top: -2em;
     z-index: 200;
@@ -84,27 +83,27 @@ header{
     position: fixed;
     width: 100%;
 }
-header button{
+header button {
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid white;
 }
-header button b{
+header button b {
     font-family: var(--ft-first);
     font-weight: 700;
     color: var(--fc-init);
     text-transform: uppercase;
     font-size: 1em;
 }
-header button #hamb{
+header button #hamb {
     padding: 0.5em;
     display: inline-block;
     margin: 0;
     width: 1.7em;
 }
-header button #hamb .barra{
+header button #hamb .barra {
     margin: 0.4em 0 0.4em;
     transition: all 0.3s;
     -webkit-transform-origin: 30% center;
@@ -117,7 +116,7 @@ header button #hamb .barra{
     border-radius: 10px;
     border: 1px solid black;
 }
-#n-dos{
+#n-dos {
     height: auto;
     display: none;
     position: fixed;
@@ -135,16 +134,16 @@ header button #hamb .barra{
     text-align: center;
     overflow: auto;
 }
-#n-dos ul{
+#n-dos ul {
     margin: 0;
     padding: 0;
 }
-#n-dos ul li{
+#n-dos ul li {
     list-style: none;
     line-height: 2.5em;
     padding: 0 0.5em;
 }
-#n-dos ul li a{
+#n-dos ul li a {
     margin: 0;
     color: black;
     font-family: var(--ft-first);
@@ -152,11 +151,11 @@ header button #hamb .barra{
     letter-spacing: 2px;
     font-size: 1.5em;
 }
-#n-dos ul li:hover{
+#n-dos ul li:hover {
     background-color: lightgray;
     font-weight: 500;
 }
-#barra nav{
+#barra nav {
     display: none;
 }
 
@@ -167,7 +166,7 @@ header button #hamb .barra{
     margin-top: -2em;
     z-index: 205;
     height: auto;
-    min-height:110vh;
+    min-height: 110vh;
     background-color: white;
     overflow: scroll;
     width: 100%;
@@ -184,19 +183,20 @@ header button #hamb .barra{
     animation-name: animatetop;
     animation-duration: 0.6s;
 }
-.modal-content form{
+.modal-content form {
     top: 50%;
     display: grid;
     grid-template-columns: 1fr;
     font-family: var(--ft-first);
 }
-.modal-content form label{
+.modal-content form label {
     font-weight: 700;
     font-size: 1em;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
-.modal-content form input, .modal-content form textarea{
+.modal-content form input,
+.modal-content form textarea {
     border-radius: 4px;
     border: 2px solid #eee;
     transition: all 0.1s;
@@ -204,11 +204,13 @@ header button #hamb .barra{
     resize: none;
     padding: 10px 13px;
 }
-.modal-content form input:hover, .modal-content form input:focus, 
-.modal-content form textarea:hover, .modal-content form textarea:focus{
+.modal-content form input:hover,
+.modal-content form input:focus,
+.modal-content form textarea:hover,
+.modal-content form textarea:focus {
     border: 2px solid black;
 }
-.modal-content form .mBox{
+.modal-content form .mBox {
     border: 0px;
     display: flex;
     justify-content: center;
@@ -217,15 +219,25 @@ header button #hamb .barra{
 }
 
 @-webkit-keyframes animatetop {
-    from {top:-400px} 
-    to {top:0}
+    from {
+        top: -400px
+    }
+    to {
+        top: 0
+    }
 }
+
 @keyframes animatetop {
-    from {top:-400px}
-    to {top:0}
+    from {
+        top: -400px
+    }
+    to {
+        top: 0
+    }
 }
+
 .close {
-	z-index: 90;
+    z-index: 90;
     color: black;
     display: flex;
     justify-content: flex-end;
@@ -234,13 +246,11 @@ header button #hamb .barra{
     font-size: 28px;
 }
 
-
-
 /* -----------ESTILOS NORMALES (para móviles en vertical)----------- */
-#barra{
+#barra {
     background-color: rgb(254, 254, 254);
 }
-#barra .principal{
+#barra .principal {
     margin-top: 2em;
     margin-bottom: 1em;
     display: flex;
@@ -250,13 +260,13 @@ header button #hamb .barra{
     text-align: center;
     font-family: var(--ft-first);
 }
-#barra .principal h1{
+#barra .principal h1 {
     margin: 0;
     font-size: 1.3em;
     color: var(--fc-init);
     font-weight: 500;
 }
-#barra .principal h3{
+#barra .principal h3 {
     color: var(--fc-init);
     margin-top: 0;
     margin-bottom: 2em;
@@ -265,7 +275,7 @@ header button #hamb .barra{
     color: #000;
     font-weight: 400;
 }
-.btn_event{
+.btn_event {
     font-size: 0.8em;
     letter-spacing: 1px;
     border-radius: 25px;
@@ -277,13 +287,13 @@ header button #hamb .barra{
     color: white;*/
     text-transform: capitalize;
     font-weight: 700;
-} 
-#barra .contact{
+}
+#barra .contact {
     margin-top: 2em;
     display: flex;
     justify-content: center;
 }
-#barra .contact span{
+#barra .contact span {
     font-size: 1.4em;
     padding-right: 0.5em;
     padding-left: 0.5em;
@@ -291,8 +301,7 @@ header button #hamb .barra{
     justify-content: center;
     align-self: center;
 }
-
-#barra img{
+#barra img {
     padding: 5px;
     border: 2px solid darkorchid;
     width: 115px;
@@ -300,22 +309,22 @@ header button #hamb .barra{
     object-fit: cover;
     border-radius: 250px;
 }
-.btn_event:hover{
+.btn_event:hover {
     background: black;
     color: white;
 }
 
 /*------------------------------*/
-#content{
+#content {
     margin-top: 0;
     padding: 0;
     background-color: rgb(245, 246, 250);
     width: 100%;
 }
-#content main{
+#content main {
     margin: 0;
 }
-#content main .elem{
+#content main .elem {
     margin-top: 0;
     height: 100vh;
     padding: 1.5em 1.8em;
@@ -323,24 +332,31 @@ header button #hamb .barra{
     height: auto;
     background-color: white;
 }
-#content main #r_uno p{
+#content main #r_uno p {
     font-family: var(--ft-first);
-    text-align: justify;
     color: var(--fc-init);
-    letter-spacing:  1px;
+    letter-spacing: 1px;
     font-weight: 400;
 }
-#content main #r_uno h2{
+#content main #r_uno .love {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#content main #r_uno p span {
+    color: #FF3C32;
+    font-size: 1em;
+}
+#content main #r_uno h2 {
     font-family: var(--ft-first);
     color: var(--fc-init);
 }
-#content main #r_uno ul{
+#content main #r_uno ul {
     display: flex;
     list-style: none;
     padding: 0;
     flex-wrap: wrap;
 }
-#content main #r_uno li{
+#content main #r_uno li {
     margin: 0 0.4em 0.4em 0;
     background-color: lightgray;
     padding: 0.3em 0.9em;
@@ -350,7 +366,7 @@ header button #hamb .barra{
     text-transform: capitalize;
     letter-spacing: 1px;
 }
-#content main .elem h1{
+#content main .elem h1 {
     font-family: var(--ft-first);
     font-size: 1.5em;
     color: var(--fc-init);
@@ -359,43 +375,42 @@ header button #hamb .barra{
 }
 
 /*------------------------------*/
-
-#content main #r_dos{
+#content main #r_dos {
     height: auto;
 }
-.lina-edu{
-    padding: 1em 1.5em;
+.lina-edu {
+    padding: 1em 0.5em;
 }
-.lina-edu .line{
-    padding: 0.2em 0 0.2em 0.6em;
-    border-left: 2px solid silver;
+.lina-edu .line {
+    padding: 0.2em 0 0.2em 0em;
+    border-bottom: 2px solid silver;
     transition: all 0.19s;
 }
-.lina-edu .line:hover{
-    border-left: 2px solid #000;
+.lina-edu .line:hover {
+    border-bottom: 2px solid #000;
 }
-.lina-edu .item{
+.lina-edu .item {
     padding: 0.5em 1em;
     border-radius: 5px;
     transition: all .4s;
 }
-.lina-edu h2{
-    letter-spacing:  1px;
+.lina-edu h2 {
+    letter-spacing: 1px;
     word-spacing: 2px;
     color: var(--fc-init);
     font-family: var(--ft-first);
     position: relative;
 }
-.lina-edu h5{
+.lina-edu h5 {
     margin: -5px 0 0;
     color: var(--fc-init);
     font-family: var(--ft-first);
     position: relative;
 }
-.lina-edu .url a{
+.lina-edu .url a {
     display: flex;
 }
-.lina-edu .url span{
+.lina-edu .url span {
     display: flex;
     margin-top: 0.2em;
     margin-left: 0.2em;
@@ -404,34 +419,23 @@ header button #hamb .barra{
     align-items: flex-end;
     font-size: 1.8em;
 }
-.lina-edu p{
-    letter-spacing:  1px;
+.lina-edu p {
+    letter-spacing: 1px;
     word-spacing: 2px;
     color: #444444;
     font-family: var(--ft-first);
     margin: 8px 0 0;
     position: relative;
 }
-.lina-edu p:hover{
+.lina-edu p:hover {
     color: #222;
-}
-.lina-edu p:before{
-    content: '';
-    position: absolute;
-    left: -2.2em;
-    top: -2.8em;
-    width: 15px;
-    height: 15px;
-    border: 3px solid silver;
-    border-radius: 50%;
-    background-color: gray;
 }
 
 /*-----------------------------*/
-#content main #r_tres{
+#content main #r_tres {
     height: auto;
 }
-#content main #r_tres .hg_uno{
+#content main #r_tres .hg_uno {
     display: grid;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -440,35 +444,36 @@ header button #hamb .barra{
     padding: 1em;
     grid-gap: 0.9em 0.7em;
 }
-#content main #r_tres .hg_uno .item{
+#content main #r_tres .hg_uno .item {
     border-radius: 6px;
     border: 1px solid #eee;
-    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     transition: all .1s linear;
     display: flex;
     transition: all 0.08s;
     font-family: var(--ft-first);
 }
-#content main #r_tres .hg_uno .item:hover, .disable:not(:hover){
+#content main #r_tres .hg_uno .item:hover,
+.disable:not(:hover) {
     transform: translateY(-2px);
-    box-shadow: 0 3px 4px rgba(0,0,0,.1);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
 }
-#content main #r_tres .hg_uno .item .info{
+#content main #r_tres .hg_uno .item .info {
     display: flex;
     align-items: center;
 }
-#content main #r_tres .hg_uno .item .info .datos{
+#content main #r_tres .hg_uno .item .info .datos {
     margin: 0.4em;
     padding: 0 0.8em;
 }
 #content main #r_tres .hg_uno .item .info .datos .title {
     display: flex;
 }
-#content main #r_tres .hg_uno .item .info .datos .title h3{
+#content main #r_tres .hg_uno .item .info .datos .title h3 {
     font-size: 1.2em;
     color: var(--fc-init);
 }
-#content main #r_tres .hg_uno .item .info .datos .title span{
+#content main #r_tres .hg_uno .item .info .datos .title span {
     margin-left: -0.5em;
     color: #FF3C32;
     font-size: 1.4em;
@@ -478,50 +483,113 @@ header button #hamb .barra{
     opacity: 0;
     align-items: center;
 }
-#content main #r_tres .hg_uno .item .info .datos > .title span:hover{
+#content main #r_tres .hg_uno .item .info .datos>.title span:hover {
     opacity: 1;
 }
-
-#content main #r_tres .hg_uno .item .info .datos{
+#content main #r_tres .hg_uno .item .info .datos {
     font-size: 0.8em;
     color: rgb(55, 55, 55);
 }
-#content main #r_tres .hg_uno .item .info p{
+#content main #r_tres .hg_uno .item .info p {
     margin-top: -0.5em;
     color: gray;
 }
-#content main #r_tres .hg_uno .item .img{
+#content main #r_tres .hg_uno .item .img {
     display: flex;
     border-radius: 5px 0 0 5px;
     justify-content: center;
     align-items: center;
     width: 6em;
 }
-#content main #r_tres .hg_uno .item .img img{
+#content main #r_tres .hg_uno .item .img img {
     width: 50px;
     height: 50px;
 }
 
-
-
 /* -----------Móviles en horizontal o tablets en vertical----------- */
-@media (min-width: 768px) { 
-    
 
+@media (min-width: 768px) {
     .modal-content {
         padding: 2em 15%;
     }
     /*------------------------------*/
-    
-    #content main .elem{
+    #content main .elem {
         padding-left: 7em;
         padding-right: 7em;
     }
+    #content main #r_uno p {
+        text-align: justify;
+    }
+    /*----------------------------*/
+    .lina-edu .line {
+        padding: 0.2em 0 0.2em 0.6em;
+        border-bottom: 0px;
+        border-left: 2px solid silver;
+        transition: all 0.19s;
+    }
+    .lina-edu .line:hover {
+        border-left: 2px solid #000;
+        border-bottom: 0px;
+    }
+    .lina-edu .item {
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        transition: all .4s;
+    }
+    .lina-edu h2 {
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        color: var(--fc-init);
+        font-family: var(--ft-first);
+        position: relative;
+    }
+    .lina-edu h5 {
+        margin: -5px 0 0;
+        color: var(--fc-init);
+        font-family: var(--ft-first);
+        position: relative;
+    }
+    .lina-edu .url a {
+        display: flex;
+    }
+    .lina-edu .url span {
+        display: flex;
+        margin-top: 0.2em;
+        margin-left: 0.2em;
+        color: #222;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 1.8em;
+    }
+    .lina-edu p {
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        color: #444444;
+        font-family: var(--ft-first);
+        margin: 8px 0 0;
+        position: relative;
+    }
+    .lina-edu p:hover {
+        color: #222;
+    }
+    .lina-edu p:before {
+        content: '';
+        position: absolute;
+        left: -2.1em;
+        top: -2.8em;
+        width: 15px;
+        height: 15px;
+        border: 3px solid silver;
+        border-radius: 50%;
+        background-color: gray;
+    }
 }
 
+
 /* -----------Tablets en horizonal y escritorios normales----------- */
+
 @media (min-width: 1024px) {
-    #n-dos{
+    #n-dos {
         display: none;
     }
     /*--------------------------------*/
@@ -532,25 +600,25 @@ header button #hamb .barra{
         padding: 2em 25%;
     }
     /*--------------------------------*/
-    button{
+    button {
         padding: 0.7em 3em;
-    } 
-    #init{
+    }
+    #init {
         display: flex;
     }
-    header{
+    header {
         display: none;
     }
-    #barra{
+    #barra {
         height: auto;
         background-color: rgb(254, 254, 254);
         position: fixed;
         width: 24%;
-        overflow:auto;
-        max-height:100vh;
+        overflow: auto;
+        max-height: 100vh;
         border-right: 1px solid #eee;
     }
-    #barra .principal{
+    #barra .principal {
         margin-top: 1.4em;
         margin-bottom: 0;
         display: flex;
@@ -560,31 +628,31 @@ header button #hamb .barra{
         text-align: center;
         font-family: var(--ft-first);
     }
-    #barra .principal #mail{
+    #barra .principal #mail {
         font-size: 0.8em;
         letter-spacing: 1px;
         border-radius: 25px;
         padding: 0.7em 1.6em;
-    } 
-    #barra img{
+    }
+    #barra img {
         width: 110px;
         height: 110px;
     }
-    #barra nav{
+    #barra nav {
         display: inline;
     }
-    #barra nav ul{
+    #barra nav ul {
         padding: 0;
     }
-    #barra nav ul li{
+    #barra nav ul li {
         list-style: none;
         overflow: hidden;
     }
-    #barra nav ul li a:hover{
+    #barra nav ul li a:hover {
         background-color: lightgray;
         font-weight: 500;
     }
-    #barra nav ul li a{
+    #barra nav ul li a {
         display: block;
         padding: 0.8em 0 0.8em 2em;
         width: 100%;
@@ -593,66 +661,32 @@ header button #hamb .barra{
         letter-spacing: 1px;
         color: var(--fc-init);
     }
-    #barra .contact{
+    #barra .contact {
         margin-top: 25vh;
         display: flex;
         align-items: flex-end;
         justify-content: center;
     }
-
     /*------------------------------*/
-    #content{
+    #content {
         margin-top: 0;
         padding: 0;
         width: 76%;
         background-color: rgb(245, 246, 250);
         margin-left: 24%;
     }
-    #content main{
+    #content main {
         padding: 1.4em 1.4em;
         margin: 0;
     }
-    #content main .elem{
+    #content main .elem {
         margin-top: 0;
         border: 1px solid #eee;
         padding: 2.3em 2.3em;
         margin-bottom: 1.4em;
     }
-    #content main #r_uno p{
-        font-family: var(--ft-first);
-        letter-spacing:  1px;
-        font-weight: 400;
-        word-spacing: 2px;
-    }
-    #content main #r_uno h2{
-        font-family: var(--ft-first);
-        
-    }
-    #content main #r_uno ul{
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
-    #content main #r_uno li{
-        background-color: lightgray;
-        padding: 0.3em 0.9em;
-        margin-right: 0.4em;
-        border-radius: 25px;
-        font-family: var(--ft-first);
-        font-size: 0.9em;
-        text-transform: capitalize;
-        letter-spacing: 1px;
-    }
-    #content main .elem h1{
-        font-family: var(--ft-first);
-        font-size: 1.5em;
-        color: var(--fc-init);
-        padding: 0;
-        margin: 0;
-    }
-    
     /*------------------------------*/
-    #content main #r_tres .hg_uno{
+    #content main #r_tres .hg_uno {
         display: grid;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
@@ -661,26 +695,21 @@ header button #hamb .barra{
         padding: 1em;
         grid-gap: 15px 10px;
     }
-    
-    
     /*------------------------------*/
-    
 }
 
+
 /* -----------Escritorios muy anchos----------- */
+
 @media (min-width: 1200px) {
-   
     .modal-content {
         padding: 2em 30%;
-    } 
-    #barra{
+    }
+    #barra {
         width: 21%;
     }
-    #content{
+    #content {
         width: 100%;
         margin-left: 21%;
     }
-
-    
-
 }
