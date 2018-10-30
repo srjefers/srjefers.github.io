@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,18 @@
     <link rel="stylesheet" href="css/icons.css">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-
 <body>
+    <nav id="n-dos">
+        <ul>
+            <li class="m_close"><a href="#r_uno">Acerca de mi</a></li>
+            <li class="m_close"><a href="#r_dos">Educacion</a></li>
+            <li class="m_close"><a href="#r_tres">Habilidades</a></li>
+            <li class="m_close"><a href="#r_four">Portafolio</a></li>
+        </ul>
+    </nav>
     <header>
+        <a href="Curriculum vitae.pdf" target="_blank" download=""><span class="icon-r-p_pdf"></span></a>
+        <button><span class="icon-r-text"></span></button>
         <button id="menu">
             <b>Menu</b>
             <div id="hamb">
@@ -21,17 +29,6 @@
             </div>
         </button>
     </header>
-
-
-    <nav id="n-dos">
-        <ul>
-            <li class="m_close"><a href="#r_uno">Acerca de mi</a></li>
-            <li class="m_close"><a href="#r_dos">Educacion</a></li>
-            <li class="m_close"><a href="#r_tres">Habilidades</a></li>
-            <li class="m_close"><a href="#r_four">Portafolio</a></li>
-            <li class="m_close"><a href="#">Recomendaciones</a></li>
-        </ul>
-    </nav>
 
     <section id="myModal" class="modal">
         <span class="close  icon-r-clear"></span>
@@ -59,7 +56,6 @@
                     <h1>Sr Jefers</h1>
                     <h3>Web Developer / SQL Developer</h3>
                     <button id="mail" class="btn_event">Hablame! :D</button>
-                    <!--href="mailto:ajefersonstiv@gmail.com"-->
                 </div>
             </div>
             <nav>
@@ -71,9 +67,9 @@
                 </ul>
             </nav>
             <div class="contact">
-                <span class="icon-r-mail"></span>
-                <span class="icon-linkedin"></span>
-                <span class="icon-i-github"></span>
+                <a href="mailto:ajefersonstiv@gmail.com"><span class="icon-r-mail"></span></a>
+                <a href="https://www.linkedin.com/in/jefers-argueta" target="_blank"><span class="icon-linkedin"></span></a>
+                <a href="https://github.com/srjefers/" target="_blank"><span class="icon-i-github"></span></a>
             </div>
 
         </section>
@@ -198,19 +194,6 @@
                         </div>
                         <div class="box item">
                             <div class="img">
-                                <img src="images/svg/hibernate.svg" alt="Hibernate Framework">
-                            </div>
-                            <article class="info">
-                                <div class="datos">
-                                    <article class="title">
-                                        <h3>Hibernate Framework</h3>
-                                    </article>
-                                    <p>Basico</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box item">
-                            <div class="img">
                                 <img src="images/svg/html5.svg" alt="HTML 5">
                             </div>
                             <article class="info">
@@ -322,19 +305,6 @@
                         </div>
                         <div class="box item">
                             <div class="img">
-                                <img src="images/svg/spring.svg" alt="Spring Framework">
-                            </div>
-                            <article class="info">
-                                <div class="datos">
-                                    <article class="title">
-                                        <h3>Spring Framework</h3>
-                                    </article>
-                                    <p>Basico</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box item">
-                            <div class="img">
                                 <img src="images/svg/sql.svg" alt="SQL Language">
                             </div>
                             <article class="info">
@@ -396,12 +366,38 @@
                         </div>
                         <div class="box item disable">
                             <div class="img">
+                                <img src="images/svg/hibernate.svg" alt="Hibernate Framework">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
+                                    <article class="title">
+                                        <h3>Hibernate Framework</h3>
+                                    </article>
+                                    <p>Basico</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="box item disable">
+                            <div class="img">
                                 <img src="images/svg/rust.svg" alt="Rust">
                             </div>
                             <article class="info">
                                 <div class="datos">
                                     <h3>Rust</h3>
                                     <p>Proximamente</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="box item disable">
+                            <div class="img">
+                                <img src="images/svg/spring.svg" alt="Spring Framework">
+                            </div>
+                            <article class="info">
+                                <div class="datos">
+                                    <article class="title">
+                                        <h3>Spring Framework</h3>
+                                    </article>
+                                    <p>Basico</p>
                                 </div>
                             </article>
                         </div>

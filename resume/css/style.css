@@ -83,12 +83,17 @@ header {
     position: fixed;
     width: 100%;
 }
-header button {
+header button, header a{
+    font-size: 1.4em;
+    color: black;
     background-color: white;
+    border: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+}
+header button:last-child{
+    font-size: 0.8em;
 }
 header button b {
     font-family: var(--ft-first);
@@ -217,7 +222,6 @@ header button #hamb .barra {
     background: white;
     margin-top: 2em;
 }
-
 @-webkit-keyframes animatetop {
     from {
         top: -400px
@@ -226,7 +230,6 @@ header button #hamb .barra {
         top: 0
     }
 }
-
 @keyframes animatetop {
     from {
         top: -400px
@@ -235,7 +238,6 @@ header button #hamb .barra {
         top: 0
     }
 }
-
 .close {
     z-index: 90;
     color: black;
@@ -298,6 +300,7 @@ header button #hamb .barra {
     padding-right: 0.5em;
     padding-left: 0.5em;
     display: flex;
+    color: var(--fc-init);
     justify-content: center;
     align-self: center;
 }
@@ -594,26 +597,51 @@ header button #hamb .barra {
     }
     /*--------------------------------*/
     .modal {
-        margin-top: 0;
+        margin-top: -3em;
     }
     .modal-content {
         padding: 2em 25%;
     }
     /*--------------------------------*/
-    button {
-        padding: 0.7em 3em;
+    header {
+        z-index: 5;
+        width: 79%;
+        margin-top: 0;
+        padding: 0;
+        margin-left: 21%;
+        border-bottom: 1px solid #eee;
+        border-left: 1px solid #eee;
+        position: relative;
+        transition: all 0.4s;
     }
+    header button,
+    header a{
+        padding: 0.5em;
+        margin-right: 0.5em;
+        color: var(--fc-init);
+        font-size: 1.4em;
+    }
+    header button:hover,
+    header a:hover{
+        background-color: #eee;
+    }
+    header #menu {
+        display: none;
+    }
+    
+    /*button {
+        padding: 0.7em 3em;
+    }*/
     #init {
         display: flex;
     }
-    header {
-        display: none;
-    }
     #barra {
+        z-index: 10;
         height: auto;
         background-color: rgb(254, 254, 254);
         position: fixed;
         width: 24%;
+        margin-top: -3.2em;
         overflow: auto;
         max-height: 100vh;
         border-right: 1px solid #eee;
