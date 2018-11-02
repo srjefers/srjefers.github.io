@@ -76,16 +76,22 @@ body {
 }
 header {
     padding: 0.5em 0;
-    margin-top: -2em;
+    margin-top: -5em;
+    background-color: white;
+    border-bottom: 1px solid #eee;
     z-index: 200;
     display: flex;
+    height: 2em;
+    top: 5em;
     justify-content: flex-end;
+    transition: top 0.2s ease-in-out;
     position: fixed;
     width: 100%;
 }
 header button, header a{
     font-size: 1.4em;
     color: black;
+    padding: 0 0.5em;
     background-color: white;
     border: 0px;
     display: flex;
@@ -125,7 +131,7 @@ header button #hamb .barra {
     height: auto;
     display: none;
     position: fixed;
-    margin-top: -2em;
+    margin-top: -5em;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.6s;
     animation-name: animatetop;
@@ -168,7 +174,7 @@ header button #hamb .barra {
 .modal {
     display: none;
     position: fixed;
-    margin-top: -2em;
+    margin-top: -5em;
     z-index: 205;
     height: auto;
     min-height: 110vh;
@@ -249,6 +255,9 @@ header button #hamb .barra {
 }
 
 /* -----------ESTILOS NORMALES (para móviles en vertical)----------- */
+#init{
+    margin-top: 5em;
+}
 #barra {
     background-color: rgb(254, 254, 254);
 }
@@ -575,16 +584,20 @@ header button #hamb .barra {
     .lina-edu p:hover {
         color: #222;
     }
-    .lina-edu p:before {
+    .lina-edu h2:before {
         content: '';
         position: absolute;
-        left: -2.1em;
-        top: -2.8em;
+        left: -1.4em;
+        top: 1.7em;
         width: 15px;
         height: 15px;
         border: 3px solid silver;
         border-radius: 50%;
         background-color: gray;
+    }
+    .lina-edu h2:hover::before{
+        border: 3px solid gray;
+        background-color: #222;
     }
 }
 
@@ -606,8 +619,11 @@ header button #hamb .barra {
     header {
         z-index: 5;
         width: 79%;
+        top: 0em;
+        transition: top 0.2s ease-in-out;
         margin-top: 0;
         padding: 0;
+        height: 3em;
         margin-left: 21%;
         border-bottom: 1px solid #eee;
         border-left: 1px solid #eee;
@@ -634,6 +650,7 @@ header button #hamb .barra {
     }*/
     #init {
         display: flex;
+        margin-top: 0em;
     }
     #barra {
         z-index: 10;

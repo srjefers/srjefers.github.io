@@ -1,0 +1,41 @@
+/* ToolTip flotante */
+
+.tooltip::before{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 170px;
+    padding: 10px;
+    right: 0.5em;
+    font-size: 0.6em;
+    text-align: center;
+    font-family: var(--ft-first);
+    line-height: 1.4em;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    content: attr(title);
+    bottom: -80%;
+}
+.tooltip::after{
+    transform: rotate(180deg);
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    content: "";
+    bottom: 0%;
+    border-top-color: rgba(0, 0, 0, 0.8);
+}
+.tooltip:hover::before,
+.tooltip:hover::after{
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .tooltip::before{
+        bottom: -80%;
+    }
+}
