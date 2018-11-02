@@ -7,6 +7,7 @@
     <title>Resumen</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/tooltip.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -24,7 +25,8 @@
     <meta property="og:description" content="Hey! Este es mi resumen, conoceme :D">
     <meta property="og:title" content="Resumen de Sr. Jefers">
     <meta property="og:url" content="https://srjefers.github.io/resume/">
-        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
@@ -36,9 +38,9 @@
             <li class="m_close"><a href="#r_four">Portafolio</a></li>
         </ul>
     </nav>
-    <header>
-        <a href="https://goo.gl/Fouasi" target="_blank"><span class="icon-r-p_pdf"></span></a>
-        <button><span class="icon-r-text"></span></button>
+    <header id="nav">
+        <a class="tooltip botton" href="https://goo.gl/Fouasi" target="_blank" title="Version en PDF!"><span class="icon-r-p_pdf"></span></a>
+        <button class="tooltip botton" title="Cambia los colores"><span class="icon-r-text"></span></button>
         <button id="menu">
             <b>Menu</b>
             <div id="hamb">
@@ -99,7 +101,7 @@
                     <p>Soy una persona de gustos simples, proactiva, autodidacta, que no le teme al cambio y con un gran amor a la programación. Soy del tipo de persona que se fija en los detalles y aun despues de terminar el trabajo, trata de buscar como
                         mejorarlo.
                     </p>
-                    <p>Me encanta aprender nuevas cosas, ser comunicativo. Soy una persona que puede trabajar junto a un grupo de personas o de forma individual y siempre entregar el mismo resultado.</p>
+                    <p>Me encanta aprender nuevas cosas, ser comunicativo. Soy una persona que puede trabajar junto a un grupo de personas o de forma individual y siempre entregar el mismo resultado incluso bajo presion.</p>
                     
                     <h2>Idiomas</h2>
                     <ul>
@@ -563,7 +565,8 @@
             </main>
         </section>
     </section>
-
+    
+    <script src="js/scroll.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
