@@ -707,7 +707,7 @@ header button #hamb .barra {
         color: var(--fc-init);
     }
     #barra .contact {
-        margin-top: 25vh;
+        margin-top: 1em;
         display: flex;
         align-items: flex-end;
         justify-content: center;
