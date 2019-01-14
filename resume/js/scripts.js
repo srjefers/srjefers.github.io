@@ -1,4 +1,4 @@
-const URL = 'https://raw.githubusercontent.com/srjefers/resume/master/js/';
+const URL = 'https://raw.githubusercontent.com/srjefers/srjefers.github.io/master/resume/js/';
 const menu = document.getElementById('menu');
 const miInit = {
     method: 'GET',
