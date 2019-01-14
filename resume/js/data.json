@@ -2,7 +2,7 @@
   {
     "titlesHead":["Acerca de mi", "Intereses personales", "Educacion", "Habilidades", "Herramientas", "Portafolio"],
     "aboutMe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas dolore reiciendis placeat ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus provident ratione. Repudiandae voluptas dolore reiciendis placeat ex possimus quaerat facere esse similique. Facere corporis nemo corrupti sit neque fugit eveniet delectus provident ratione.",
-    "interesesPersonales":["UI","UX", "Fotografia", "Software Libre", "Lectura", "Data Science", "Desarrollo Web", "Historia", "Linux"],
+    "interesesPersonales":["UI","UX", "Fotografia", "Software Libre", "Lectura", "Data Science", "Machine learning","Desarrollo Web", "Historia", "Linux"],
     "Educacion":[
       {
         "Tema":"Ingenieria en Sistemas", 
