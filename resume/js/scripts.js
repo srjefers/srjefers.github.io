@@ -102,4 +102,10 @@ function animate(){
 }
 animate();
 
-
+const msgbox = document.getElementById('mssgbox');
+const msgbot = document.getElementById('mssbot');
+msgbot.addEventListener('click',
+    ()=>{ 
+        console.log(11);
+        msgbox.style.display = 'none';
+    });
