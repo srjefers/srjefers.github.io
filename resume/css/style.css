@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rubik:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600&display=swap');
 * {
     text-rendering: optimizeLegibility;
     text-decoration: none;
@@ -74,7 +75,7 @@ body {
     background-color: white;
     /*cursor: url('po.svg'), auto;*/
 }
-header {
+.header {
     padding: 0.5em 0;
     margin-top: -5em;
     background-color: white;
@@ -88,7 +89,7 @@ header {
     position: fixed;
     width: 100%;
 }
-header button, header a{
+.header button, .header a{
     font-size: 1.4em;
     color: black;
     padding: 0 0.5em;
@@ -98,23 +99,23 @@ header button, header a{
     justify-content: center;
     align-items: center;
 }
-header button:last-child{
+.header button:last-child{
     font-size: 0.8em;
 }
-header button b {
+.header button b {
     font-family: var(--ft-first);
     font-weight: 700;
     color: var(--fc-init);
     text-transform: uppercase;
     font-size: 1em;
 }
-header button #hamb {
+.header button #hamb {
     padding: 0.5em;
     display: inline-block;
     margin: 0;
     width: 1.7em;
 }
-header button #hamb .barra {
+.header button #hamb .barra {
     margin: 0.4em 0 0.4em;
     transition: all 0.3s;
     -webkit-transform-origin: 30% center;
@@ -168,6 +169,41 @@ header button #hamb .barra {
 }
 #barra nav {
     display: none;
+}
+/*--------------------------*/
+.mssgnot{
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    right: 0;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    background-color: black;    
+    color: white;
+    height: 6.5em;
+    width: 90%;
+}
+.mssgnot p{
+    margin: 0;
+    padding: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .75em;
+}
+.mssgnot h1{
+    margin: 0;
+    text-decoration: none;
+    padding: 10px 0 0 10px;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .85em;
+}
+.mssgnot a{
+    margin: 0;
+    text-decoration: none;
+    padding: 10px 0 0 10px;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .75em;
 }
 
 /*--------------------------------*/
@@ -532,6 +568,15 @@ header button #hamb .barra {
     #content main #r_uno p {
         text-align: justify;
     }
+    /*------------------------------*/
+
+    .mssgnot{
+        bottom: 0;
+        margin-right: 10%;
+        background-color: black;
+        height: 6.5em;
+        width: 80%;
+    }
     /*----------------------------*/
     .lina-edu .line {
         padding: 0.2em 0 0.2em 0.6em;
@@ -616,7 +661,7 @@ header button #hamb .barra {
         padding: 2em 25%;
     }
     /*--------------------------------*/
-    header {
+    .header {
         z-index: 5;
         width: 79%;
         top: 0em;
@@ -630,18 +675,18 @@ header button #hamb .barra {
         position: relative;
         transition: all 0.4s;
     }
-    header button,
-    header a{
+    .header button,
+    .header a{
         padding: 0.5em;
         margin-right: 0.5em;
         color: var(--fc-init);
         font-size: 1.4em;
     }
-    header button:hover,
-    header a:hover{
+    .header button:hover,
+    .header a:hover{
         background-color: #eee;
     }
-    header #menu {
+    .header #menu {
         display: none;
     }
     
@@ -713,6 +758,15 @@ header button #hamb .barra {
         justify-content: center;
     }
     /*------------------------------*/
+
+    .mssgnot{
+        bottom: 0;
+        margin-right: 20px;
+        background-color: black;
+        height: 6.5em;
+        width: 18.5em;
+    }
+    /*------------------------------*/
     #content {
         margin-top: 0;
         padding: 0;
@@ -756,5 +810,12 @@ header button #hamb .barra {
     #content {
         width: 100%;
         margin-left: 21%;
+    }
+    .mssgnot{
+        margin-right: 20px;
+        bottom: 0;
+        background-color: black;
+        height: 6.5em;
+        width: 18.5em;
     }
 }
