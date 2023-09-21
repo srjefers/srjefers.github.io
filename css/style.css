@@ -58,6 +58,7 @@ p {
     font-family: var(--ft-second);
     text-align: justify;
     line-height: 1.6;
+    word-spacing: 1px;
 }
 h2 {
     font-family: var(--ft-first);
@@ -71,8 +72,9 @@ h3 {
     margin-top: .4em;
     margin-bottom: .2em;
 }
-
-
+ul{
+    padding-inline-start: 1.2em;
+}
 li{
     font-family: var(--ft-second);
     text-align: justify;
@@ -80,7 +82,9 @@ li{
     margin-top: 1px;
     margin-bottom: 1px;
     padding-left: 2px;
+    word-spacing: 1px;
 }
+
 .flex-space{
     display: flex;
     flex-direction: column;
@@ -181,9 +185,8 @@ button:hover{
     h1 {
         font-size: 3.5em;
     }
-    p {
-        letter-spacing: 1px;
-        line-height: 1.2;
+    p{
+        word-spacing: 1px;
     }
     h2 {
         font-size: 2em;
@@ -194,7 +197,14 @@ button:hover{
     h3 {    
         margin-bottom: .3em;
     }
+
+    ul{
+        padding-inline-start: 2.5em;
+    }
     li{
-        text-align: justify;
+        word-spacing: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        padding-left: 2px;
     }
 }
