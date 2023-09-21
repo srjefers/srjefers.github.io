@@ -51,19 +51,12 @@ span{
 }
 h1 {
     font-family: var(--ft-first);
-    font-size: 2.2em;
+    font-size: 2.5em;
     text-align: center;
-}
-p {
-    font-family: var(--ft-second);
-    text-align: justify;
-    line-height: 1.6;
-    word-spacing: 1px;
-    letter-spacing: 0;
 }
 h2 {
     font-family: var(--ft-first);
-    font-size: auto;
+    font-size: 1.8em;
     margin-top: 1.5em;
     margin-bottom: .5em;
     text-align: center;
@@ -73,8 +66,15 @@ h3 {
     margin-top: .4em;
     margin-bottom: .2em;
 }
+p {
+    font-family: var(--ft-second);
+    text-align: justify;
+    line-height: 1.6;
+    word-spacing: 1px;
+    letter-spacing: 0;
+}
 ul{
-    padding-inline-start: 1.2em;
+    padding-inline-start: 1.5em;
 }
 li{
     font-family: var(--ft-second);
@@ -126,11 +126,6 @@ button:hover{
 }
 
 
-
-
-
-
-
 /* -----------Móviles en horizontal o tablets en vertical----------- */
 
 @media (min-width: 768px) {
@@ -168,6 +163,7 @@ button:hover{
     }
     h3 {    
         margin-bottom: .3em;
+        font-size: auto;
     }
 
     ul{
