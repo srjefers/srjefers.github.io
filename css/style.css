@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Serif:opsz,wght@8..144,700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 ::-moz-selection {
     color: black;
@@ -15,7 +15,7 @@
       --bkg-color: #121212;
     }
     body.light-theme {
-      --text-color: #222;
+      --text-color: black;
       --bkg-color: #fff;
     }
   }
@@ -31,9 +31,8 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --ft-first: 'Roboto Serif', serif;
+    --ft-first: 'Roboto Slab', serif;
     --ft-second: 'Roboto', sans-serif;
-    --ft-third: 'Roboto Mono', monospace;
     --fc-init: white;
     --bc-first: black;
 }
@@ -57,16 +56,14 @@ h1 {
 }
 p {
     font-family: var(--ft-second);
-    letter-spacing: 1px;
     text-align: justify;
-    line-height: 1.2;
+    line-height: 1.6;
 }
 h2 {
     font-family: var(--ft-first);
     font-size: auto;
     margin-top: 1.5em;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: .5em;
     text-align: center;
 }
 h3 {
@@ -74,20 +71,25 @@ h3 {
     margin-top: .4em;
     margin-bottom: .2em;
 }
-.fs-date {
-    font-family: var(--ft-third);   
-    font-size: 1em; 
-}
+
 
 li{
     font-family: var(--ft-second);
-    letter-spacing: 1px;
-    text-align: left;
-    line-height: 1.2;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 2px;
 }
 .flex-space{
     display: flex;
     flex-direction: column;
+}
+.fs-date{
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 /*------------------------------------------------------------------*/
 .header {
@@ -194,10 +196,5 @@ button:hover{
     }
     li{
         text-align: justify;
-    }
-    .flex-space{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
     }
 }
