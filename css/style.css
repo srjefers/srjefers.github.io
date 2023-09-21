@@ -59,6 +59,7 @@ p {
     text-align: justify;
     line-height: 1.6;
     word-spacing: 1px;
+    letter-spacing: 0;
 }
 h2 {
     font-family: var(--ft-first);
@@ -141,35 +142,6 @@ button:hover{
 
 @media (min-width: 1024px) {
     /*--------------------------------
-    .header {
-        z-index: 5;
-        width: 79%;
-        top: 0em;
-        transition: top 0.2s ease-in-out;
-        margin-top: 0;
-        padding: 0;
-        height: 3em;
-        margin-left: 21%;
-        border-bottom: 1px solid #eee;
-        border-left: 1px solid #eee;
-        position: relative;
-        transition: all 0.4s;
-    }
-    .header button,
-    .header a{
-        padding: 0.5em;
-        margin-right: 0.5em;
-        color: var(--fc-init);
-        font-size: 1.4em;
-    }
-    .header button:hover,
-    .header a:hover{
-        background-color: #eee;
-    }
-    .header #menu {
-        display: none;
-    }
-    */
 }
 
 
