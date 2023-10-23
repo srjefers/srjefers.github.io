@@ -10,7 +10,7 @@ const myInit = {
     cache: "default"
 };
 
-async function getGithubResp(repoName = '', myInit){
+async function getGithubResp(repoName = ''){
     let repoUrl = 'https://api.github.com/repos/srjefers/'
     
     repoUrl += repoName;
@@ -23,26 +23,48 @@ async function getGithubResp(repoName = '', myInit){
     return [responseDescJSON, responseLangJSON];
 }
 
-urlList.forEach(
+urlList.every(
     urlName => {
+
         let htmlcode = ``;
         getGithubResp(urlName)
         .then((response) => {
 
-            console.log(response[1]);
+            console.log(response);
+            const responseException = `message` in response[0];
+            if (responseException) { throw new Error('Max number of request has been reatched') }
+            
             htmlcode = `
                 <h3>${response[0]['name']}</h3>
                 <p>${response[0]['description']}</p>
                 <a href='${response[0]['html_url']}'>${response[0]['git_url']}</a>
                 <ul>
-                    ${response[1]}
-                </ul>
             `;
-            document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
-        
-        })
-        .catch((err) => {console.log(err)});
 
-        
+            for (const [key, value] of Object.entries(response[1])){
+                htmlcode += `<li>${key}</li>`
+            }
+            htmlcode += `</ul>`
+            console.log(htmlcode);
+            
+            
+            //document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+        })
+        .catch((err) => {
+            htmlcode = `
+                <h3>trips_challenge</h3>
+                <p>Data Engineering Challenge </p>
+                <a href='https://github.com/srjefers/trips_challenge'>git://github.com/srjefers/trips_challenge.git</a>
+                <ul>
+                <li>Python</li>
+                <li>Dockerfile</li>
+                </ul>            
+            `;
+            console.log(htmlcode);
+
+
+            //document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+        });
+
     }
 )
