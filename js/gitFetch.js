@@ -30,7 +30,7 @@ urlList.every(
         getGithubResp(urlName)
         .then((response) => {
 
-            console.log(response);
+            //console.log(response);
             const responseException = `message` in response[0];
             if (responseException) { throw new Error('Max number of request has been reatched') }
             
@@ -45,10 +45,10 @@ urlList.every(
                 htmlcode += `<li>${key}</li>`
             }
             htmlcode += `</ul>`
-            console.log(htmlcode);
+            //console.log(htmlcode);
             
             
-            //document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+            document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
         })
         .catch((err) => {
             console.log(err);
@@ -61,9 +61,9 @@ urlList.every(
                 <li>Dockerfile</li>
                 </ul>            
             `;
-            console.log(htmlcode);
+            //console.log(htmlcode);
 
-            //document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+            document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
         });
 
     }
