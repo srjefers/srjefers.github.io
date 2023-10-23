@@ -2,7 +2,7 @@
 
 const urlList = [
     'Talk_devFest_2023',
-    'trips_challenge'
+    'ml_zoomcamp2023'
 ]
 const myInit = {
     method: "GET",
