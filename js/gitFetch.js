@@ -23,48 +23,49 @@ async function getGithubResp(repoName = ''){
     return [responseDescJSON, responseLangJSON];
 }
 
-urlList.every(
-    urlName => {
+try{
+    urlList.forEach(
+        urlName => {
 
-        let htmlcode = ``;
-        getGithubResp(urlName)
-        .then((response) => {
+            let htmlcode = ``;
+            getGithubResp(urlName)
+            .then((response) => {
 
-            //console.log(response);
-            const responseException = `message` in response[0];
-            if (responseException) { throw new Error('Max number of request has been reatched') }
-            
-            htmlcode = `
-                <h3>${response[0]['name']}</h3>
-                <p>${response[0]['description']}</p>
-                <a href='${response[0]['html_url']}'>${response[0]['git_url']}</a>
-                <ul>
-            `;
+                const responseException = `message` in response[0];
+                const responseStatus = response[0]['status'] === 403;
+                if (responseException || responseStatus) { throw new Error('Max number of request has been reatched') }
+                
+                htmlcode = `
+                    <h3>${response[0]['name']}</h3>
+                    <p>${response[0]['description']}</p>
+                    <a href='${response[0]['html_url']}'>${response[0]['git_url']}</a>
+                    <ul>
+                `;
 
-            for (const [key, value] of Object.entries(response[1])){
-                htmlcode += `<li>${key}</li>`
-            }
-            htmlcode += `</ul>`
-            //console.log(htmlcode);
-            
-            
-            document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
-        })
-        .catch((err) => {
-            console.log(err);
-            htmlcode = `
-                <h3>trips_challenge</h3>
-                <p>Data Engineering Challenge </p>
-                <a href='https://github.com/srjefers/trips_challenge'>git://github.com/srjefers/trips_challenge.git</a>
-                <ul>
-                <li>Python</li>
-                <li>Dockerfile</li>
-                </ul>            
-            `;
-            //console.log(htmlcode);
+                for (const [key, value] of Object.entries(response[1])){
+                    htmlcode += `<li>${key}</li>`
+                }
+                htmlcode += `</ul>`
+                
+                document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+                
+            })
 
-            document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
-        });
-
-    }
-)
+        }
+    )
+}
+catch(e){ 
+    console.log(e);
+}
+finally{
+    let htmlcode = `
+        <h3>trips_challenge</h3>
+        <p>Data Engineering Challenge </p>
+        <a href='https://github.com/srjefers/trips_challenge'>git://github.com/srjefers/trips_challenge.git</a>
+        <ul>
+        <li>Python</li>
+        <li>Dockerfile</li>
+        </ul>            
+    `;
+    document.getElementById('repoList').insertAdjacentHTML("afterbegin", htmlcode);
+}
