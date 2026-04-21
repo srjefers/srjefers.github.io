@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  hero: CollectionEntry<'site'>['data']['hero'];
+  contact: CollectionEntry<'site'>['data']['contact'];
+}
+
+const { hero, contact } = Astro.props;
+---
+<section class="hero" id="top">
+  <p class="eyebrow">{hero.eyebrow}</p>
+  <h1>{hero.name}</h1>
+  <p class="lead">{hero.lead}</p>
+  <div class="hero-actions">
+    <button class="btn" id="copy-email" type="button" data-email={contact.email}>
+      <span class="lbl">Copy email</span>
+    </button>
+    <a class="btn ghost" href={contact.github} target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="btn ghost" href={contact.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+  <p class="contact-line">
+    {contact.location} · {contact.phone} · <a href={`mailto:${contact.email}`}>{contact.email}</a>
+  </p>
+</section>

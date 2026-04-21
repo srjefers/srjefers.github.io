@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('training')).sort((a, b) => {
+  if (a.data.order != null && b.data.order != null) return a.data.order - b.data.order;
+  return b.data.year - a.data.year;
+});
+---
+<section id="training" class="section">
+  <h2>Training &amp; Certifications</h2>
+  <ul class="training-list">
+    {entries.map(({ data }) => (
+      <li>
+        <span class="training-title">
+          {data.url ? <a href={data.url} target="_blank" rel="noopener">{data.title}</a> : data.title}
+          {data.institution && ` — ${data.institution}`}
+        </span>
+        <time>{data.year}</time>
+      </li>
+    ))}
+  </ul>
+</section>

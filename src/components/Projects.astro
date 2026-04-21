@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+
+const entries = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const rendered = await Promise.all(
+  entries.map(async (entry) => {
+    const { Content } = await render(entry);
+    return { entry, Content };
+  }),
+);
+---
+<section id="work" class="section">
+  <h2>Selected Projects</h2>
+  {rendered.map(({ entry, Content }) => (
+    <article class="project">
+      <h3>{entry.data.title}</h3>
+      <div class="project-body">
+        <Content />
+      </div>
+      {entry.data.tags.length > 0 && (
+        <ul class="tags">
+          {entry.data.tags.map((t) => <li>{t}</li>)}
+        </ul>
+      )}
+    </article>
+  ))}
+</section>
