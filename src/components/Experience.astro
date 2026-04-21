@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from 'astro:content';
+
+const entries = (await getCollection('experience')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const rendered = await Promise.all(
+  entries.map(async (entry) => {
+    const { Content } = await render(entry);
+    return { entry, Content };
+  }),
+);
+---
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  {rendered.map(({ entry, Content }) => (
+    <article class="role">
+      <header>
+        <h3>{entry.data.role}</h3>
+        <p class="meta">
+          {entry.data.company} · {entry.data.location}
+          <span class="sep">·</span>
+          <time>{entry.data.start} — {entry.data.end}</time>
+        </p>
+      </header>
+      <div class="role-body">
+        <Content />
+      </div>
+    </article>
+  ))}
+</section>

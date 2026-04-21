@@ -1,0 +1,12 @@
+---
+interface Props {
+  name: string;
+  note?: string;
+}
+
+const { name, note } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <p>© {year} {name}{note ? ` · ${note}` : ''} · Press <kbd>?</kbd> for shortcuts</p>
+</footer>

@@ -1,0 +1,46 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Training from '../components/Training.astro';
+import Repos from '../components/Repos.astro';
+import Footer from '../components/Footer.astro';
+import FloatingDock from '../components/FloatingDock.astro';
+import ShortcutsDialog from '../components/ShortcutsDialog.astro';
+import PersonSchema from '../components/PersonSchema.astro';
+
+const site = await getEntry('site', 'site');
+if (!site) throw new Error('Missing site content at src/content/site/site.md');
+const { Content: AboutBody } = await render(site);
+---
+<BaseLayout
+  title={site.data.seo.title}
+  description={site.data.seo.description}
+  ogImage={site.data.seo.ogImage}
+>
+  <PersonSchema slot="head" hero={site.data.hero} contact={site.data.contact} />
+
+  <Header />
+  <main id="top">
+    <Hero hero={site.data.hero} contact={site.data.contact} />
+    <About AboutBody={AboutBody} />
+    <Experience />
+    <Projects />
+    <Skills />
+    <Training />
+    <Repos />
+  </main>
+  <Footer name={site.data.hero.name} note={site.data.footerNote} />
+
+  <FloatingDock />
+  <ShortcutsDialog />
+
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/enhance.js"></script>
+  <script src="../scripts/repos.js"></script>
+</BaseLayout>
