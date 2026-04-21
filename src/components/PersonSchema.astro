@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  hero: CollectionEntry<'site'>['data']['hero'];
+  contact: CollectionEntry<'site'>['data']['contact'];
+}
+
+const { hero, contact } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: hero.name,
+  alternateName: 'Sr Jefers',
+  jobTitle: 'Senior Data Engineer',
+  email: `mailto:${contact.email}`,
+  telephone: contact.phone.replace(/[^+\d]/g, ''),
+  url: 'https://srjefers.github.io/',
+  sameAs: [contact.github, contact.linkedin],
+  address: { '@type': 'PostalAddress', addressCountry: 'GT' },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Universidad Mariano Gálvez de Guatemala',
+  },
+  knowsAbout: [
+    'Data Engineering', 'Snowflake', 'dbt', 'Dagster', 'PySpark',
+    'AWS', 'GCP', 'Airflow', 'FastAPI', 'ELT', 'Data Warehousing',
+  ],
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
