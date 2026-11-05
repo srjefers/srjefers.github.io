@@ -2,8 +2,8 @@
 category: "Orchestration & Modeling"
 order: 2
 items:
-  - "dbt"
-  - "Dagster"
+  - "dbt (incremental models, macros, tests)"
+  - "Dagster (assets, partitions, sensors)"
   - "Airflow"
   - "Star / Snowflake"
   - "SCD"

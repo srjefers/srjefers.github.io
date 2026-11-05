@@ -1,0 +1,6 @@
+# Everyone is welcome, AI agents included.
+# Plain-Markdown profile for LLMs: https://srjefers.github.io/llms.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://srjefers.github.io/sitemap-index.xml

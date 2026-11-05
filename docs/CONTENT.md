@@ -9,6 +9,9 @@ an optional **Markdown body** for prose.
 > `astro build` fails loudly with a pointer to the offending file — **the site
 > will never deploy with broken data**.
 
+The same files also generate `/llms.txt` (a plain-Markdown copy of the profile
+for AI agents) at build time, so there is nothing extra to update.
+
 ## Collections
 
 | Collection | Path | Pattern | Sorted by |

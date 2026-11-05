@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 interface Props {
   hero: CollectionEntry<'site'>['data']['hero'];
@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { hero, contact } = Astro.props;
+const current = (await getCollection('experience')).find((e) => e.data.end === 'Present');
+const training = (await getCollection('training')).sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
 
 const schema = {
   '@context': 'https://schema.org',
@@ -14,6 +16,7 @@ const schema = {
   name: hero.name,
   alternateName: 'Sr Jefers',
   jobTitle: 'Senior Data Engineer',
+  ...(current && { worksFor: { '@type': 'Organization', name: current.data.company } }),
   email: `mailto:${contact.email}`,
   telephone: contact.phone.replace(/[^+\d]/g, ''),
   url: 'https://srjefers.github.io/',
@@ -23,9 +26,15 @@ const schema = {
     '@type': 'CollegeOrUniversity',
     name: 'Universidad Mariano Gálvez de Guatemala',
   },
+  hasCredential: training.map(({ data }) => ({
+    '@type': 'EducationalOccupationalCredential',
+    name: data.title,
+    dateCreated: String(data.year),
+    ...(data.institution && { recognizedBy: { '@type': 'Organization', name: data.institution } }),
+  })),
   knowsAbout: [
     'Data Engineering', 'Snowflake', 'dbt', 'Dagster', 'PySpark',
-    'AWS', 'GCP', 'Airflow', 'FastAPI', 'ELT', 'Data Warehousing',
+    'AWS', 'GCP', 'Kubernetes', 'Airflow', 'FastAPI', 'ELT', 'Data Warehousing', 'Data Observability',
   ],
 };
 ---

@@ -8,7 +8,7 @@ interface Props {
 
 const { hero, contact } = Astro.props;
 ---
-<section class="hero" id="top">
+<section class="hero">
   <p class="eyebrow">{hero.eyebrow}</p>
   <h1>{hero.name}</h1>
   <p class="lead">{hero.lead}</p>
@@ -16,6 +16,7 @@ const { hero, contact } = Astro.props;
     <button class="btn" id="copy-email" type="button" data-email={contact.email}>
       <span class="lbl">Copy email</span>
     </button>
+    <a class="btn ghost" href="/resume.pdf" target="_blank" rel="noopener" type="application/pdf">CV (PDF) ↗</a>
     <a class="btn ghost" href={contact.github} target="_blank" rel="noopener">GitHub ↗</a>
     <a class="btn ghost" href={contact.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>
   </div>

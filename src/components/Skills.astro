@@ -10,7 +10,7 @@ const groups = (await getCollection('skills')).sort(
   <div class="skill-grid">
     {groups.map(({ data }) => (
       <div class="skill-group">
-        <h4>{data.category}</h4>
+        <h3>{data.category}</h3>
         <ul class="tags">
           {data.items.map((item) => <li>{item}</li>)}
         </ul>

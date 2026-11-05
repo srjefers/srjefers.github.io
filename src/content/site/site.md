@@ -2,7 +2,7 @@
 hero:
   eyebrow: "Senior Data Engineer · Guatemala"
   name: "Jeferson Stiv Argueta Hernández"
-  lead: "I design cloud data platforms that don't page anyone at 3 AM — ELT on Snowflake with dbt, event-driven lakes on AWS and GCP, and the orchestration glue that keeps it honest. Seven years across supply chain, marketing, telecom, pharma, and healthcare."
+  lead: "I design cloud data platforms that don't page anyone at 3 AM — ELT on Snowflake with dbt, event-driven lakes on AWS and GCP, and the orchestration glue that keeps it honest. 7+ years across entertainment and media research, supply chain, marketing, telecom, pharma, and healthcare."
 contact:
   location: "Guatemala"
   phone: "+(502) 3312-6786"
@@ -16,11 +16,15 @@ seo:
 footerNote: "Built with care."
 ---
 
-Senior Data Engineer with experience across supply chain, marketing, telecommunications,
-pharmaceutical, and healthcare. Comfortable across the stack: Python, SQL, C#, Julia,
-JavaScript, C++; AWS and GCP; Snowflake, Redshift, Postgres, Oracle, DB2, SQL Server,
-MongoDB. IT graduate from Universidad Mariano Gálvez and current Master's student in
-Information Security.
+Senior Data Engineer with 7+ years across entertainment and media research, supply
+chain, marketing, telecommunications, pharmaceutical, and healthcare. Currently
+operating a Snowflake, dbt, and Dagster platform on GCP (GKE) with ~1,600 dbt models
+and ~290 Dagster assets: platform upgrades and security fixes, pipeline
+stabilization, data observability, and release management.
+
+Skilled in relational and NoSQL databases, Python, C#, Julia, JavaScript, C++, and
+Linux servers. IT graduate from Universidad Mariano Gálvez, with a Master's Degree
+in Information Security (2026).
 
 I care about clean data models, observable pipelines, and small improvements that
 compound — the kind of engineering that survives audits, cloud-bill reviews, and 2 AM

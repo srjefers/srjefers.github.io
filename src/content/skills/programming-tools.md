@@ -9,6 +9,10 @@ items:
   - "C++"
   - "Julia"
   - "Docker"
+  - "Kubernetes (GKE)"
   - "Git"
-  - "Linux"
+  - "GitHub Actions CI/CD"
+  - "Claude Code"
+  - "Linux servers"
+  - "Agile / Scrum"
 ---

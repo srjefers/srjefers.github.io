@@ -1,6 +1,6 @@
 ---
-title: "SnowPro Core Certification — Snowflake"
+title: "SnowPro Core Certification"
 institution: "Snowflake"
 year: 2025
-order: 1
+order: 2
 ---

@@ -1,6 +1,14 @@
 ---
 import { getCollection, render } from 'astro:content';
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// "Sep 2022" → "2022-09" (machine-readable); "Present" → undefined
+const isoMonth = (label: string) => {
+  const [mon, year] = label.split(' ');
+  const i = MONTHS.indexOf(mon);
+  return i >= 0 && year ? `${year}-${String(i + 1).padStart(2, '0')}` : undefined;
+};
+
 const entries = (await getCollection('experience')).sort(
   (a, b) => a.data.order - b.data.order,
 );
@@ -21,7 +29,8 @@ const rendered = await Promise.all(
         <p class="meta">
           {entry.data.company} · {entry.data.location}
           <span class="sep">·</span>
-          <time>{entry.data.start} — {entry.data.end}</time>
+          <time datetime={isoMonth(entry.data.start)}>{entry.data.start}</time> —
+          {isoMonth(entry.data.end) ? <time datetime={isoMonth(entry.data.end)}>{entry.data.end}</time> : entry.data.end}
         </p>
       </header>
       <div class="role-body">

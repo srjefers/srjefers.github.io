@@ -33,7 +33,7 @@ srjefers.github.io/
 │   ├── CONTENT.md                  How to edit the portfolio content (MD frontmatter)
 │   └── TROUBLESHOOTING.md          Common issues and fixes
 ├── package.json                    Deps and scripts
-├── public/                         Static assets served as-is (favicons, PDF, og-image)
+├── public/                         Static assets served as-is (favicons, CV PDF, og-image, robots.txt)
 └── src/
     ├── content.config.ts           Zod schemas for each content collection
     ├── content/
@@ -45,6 +45,7 @@ srjefers.github.io/
     ├── components/                 13 .astro components
     ├── layouts/BaseLayout.astro    Head, meta, FOUC theme script
     ├── pages/index.astro           Composes the single-page portfolio
+    ├── pages/llms.txt.ts           Builds /llms.txt — the profile as Markdown for AI agents
     ├── scripts/                    theme.js, enhance.js, repos.js (vanilla JS)
     └── styles/global.css           All styling (CSS custom properties, per-theme tokens)
 ```
